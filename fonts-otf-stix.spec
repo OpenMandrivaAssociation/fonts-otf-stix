@@ -16,6 +16,7 @@ Group:		System/Fonts/True type
 Url:		http://www.stixfonts.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
+BuildRequires: fontconfig
 BuildRequires:	mkfontscale, mkfontdir
 
 %description
