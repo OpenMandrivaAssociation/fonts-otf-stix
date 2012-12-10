@@ -62,3 +62,15 @@ ln -s ../../../%{fontdir} %{buildroot}%{fontconfdir}/otf-%{fontname}:pri=50
 %{fontdir}/*.otf
 %{fontdir}/fonts.*
 
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.0.0-2mdv2011.0
++ Revision: 675512
+- br fontconfig for fc-query used in new rpm-setup-build
+
+* Tue Dec 14 2010 Lev Givon <lev@mandriva.org> 1.0.0-1mdv2011.0
++ Revision: 621817
+- import fonts-otf-stix
+
+
