@@ -1,15 +1,11 @@
 %define fontname	stix
-%define name		fonts-otf-%{fontname}
-%define version		1.0.0
-%define release		%mkrel 2
-
 %define fontdir	 	%{_datadir}/fonts/OTF/%{fontname}
 %define fontconfdir	%{_sysconfdir}/X11/fontpath.d
 
 Summary:	Scientific and Technical Information Exchange fonts
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		fonts-otf-%{fontname}
+Version:	1.0.0
+Release:	3
 Source0:	STIXv%{version}.zip
 License:	OFLv1.1
 Group:		System/Fonts/True type
@@ -42,8 +38,6 @@ The STIX mission will be fully realized when:
 %setup -q -n STIXv%{version}
 
 %install
-%__rm -rf %{buildroot}
-
 %__install -m 0755 -d %{buildroot}%{fontdir}
 %__install -m 0644 Fonts/*.otf %{buildroot}%{fontdir}
 mkfontscale %{buildroot}/%{fontdir}
@@ -52,25 +46,8 @@ mkfontdir %{buildroot}/%{fontdir}
 %__install -m 0755 -d %{buildroot}%{fontconfdir}
 ln -s ../../../%{fontdir} %{buildroot}%{fontconfdir}/otf-%{fontname}:pri=50
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc License/*.pdf *.pdf
 %{fontconfdir}/otf*
 %{fontdir}/*.otf
 %{fontdir}/fonts.*
-
-
-
-%changelog
-* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.0.0-2mdv2011.0
-+ Revision: 675512
-- br fontconfig for fc-query used in new rpm-setup-build
-
-* Tue Dec 14 2010 Lev Givon <lev@mandriva.org> 1.0.0-1mdv2011.0
-+ Revision: 621817
-- import fonts-otf-stix
-
-
