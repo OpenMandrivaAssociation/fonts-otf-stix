@@ -5,7 +5,7 @@
 Summary:	Scientific and Technical Information Exchange fonts
 Name:		fonts-otf-%{fontname}
 Version:	1.0.0
-Release:	3
+Release:	4
 Source0:	STIXv%{version}.zip
 License:	OFLv1.1
 Group:		System/Fonts/True type
