@@ -9,7 +9,7 @@ Release:	4
 Source0:	STIXv%{version}.zip
 License:	OFLv1.1
 Group:		System/Fonts/True type
-Url:		http://www.stixfonts.org/
+Url:		https://www.stixfonts.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 BuildRequires: fontconfig
